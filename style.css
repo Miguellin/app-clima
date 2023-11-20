@@ -1,0 +1,192 @@
+.lds-roller {
+    display: inline-block;
+    position: relative;
+    margin: 0  auto;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: black;
+    margin: -4px 0 0 -4px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+
+.none {
+    display: none;
+}
+
+.show {
+    display: block !important;
+}
+
+
+body {
+    background: linear-gradient( rgba(241, 244, 252, 0.75), rgba(97, 137, 247, 0.75)), url(https://png.pngtree.com/thumb_back/fh260/background/20201009/pngtree-clear-blue-sky-with-white-clouds-panoramic-view-of-bright-clear-image_403142.jpg) no-repeat;
+    background-size: cover;
+    min-height: 89vh;
+    
+
+}
+
+@keyframes teclear {
+    from {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}
+
+@keyframes efecto {
+    50% {
+        border-color: transparent;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;;
+}
+
+h1  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    font-size: 50px;
+    font-style: italic;
+    color: rgb(0, 0, 77);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    animation: teclear 3.5s steps(16) infinite, efecta .5s step-end infinite alternate;
+}
+
+#paragraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 35px;
+}
+
+#inputCity {
+    border: none;
+    outline: none;
+    box-shadow: 5px 8px 20px 8px rgba(71, 74, 82, 0.75);
+    padding: 16px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+}
+
+#btnSearch {
+    background-color: rgb(8, 8, 8);
+    box-shadow: 5px 8px 20px 8px rgba(71, 74, 82, 0.75);
+    cursor: pointer;
+    border: none;
+    padding: 16px 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+}
+
+#btnSearch:hover {
+    background-color: rgb(78, 76, 76);
+}
+
+.clima {
+    margin-top: 70px;
+}
+
+.clima p {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 20px;
+}
